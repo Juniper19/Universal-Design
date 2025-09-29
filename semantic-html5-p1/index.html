@@ -3,19 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Capybara - Wikipedia Recreation</title>
+    <style>
+    .sr-only {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+  </style>
 </head>
 <body style="margin:40px">
 
   <header>
-    <h1>Capybara</h1>
+    <h1>Capybara <span class="sr-only">Wikipedia-style article</span></h1>
   </header>
 
   <!-- Navigation -->
-  <nav>
+  <nav aria-label="Main navigation">
     <ul>
-      <li><a href="#description">Description</a></li>
-      <li><a href="#etymology">Etymology</a></li>
-      <li><a href="#ecology">Ecology</a></li>
+      <li><a href="#description">Description<span class="sr-only"> section</span></a></li>
+      <li><a href="#etymology">Etymology<span class="sr-only"> section</span></a></li>
+      <li><a href="#ecology">Ecology<span class="sr-only"> section</span></a></li>
     </ul>
   </nav>
 
