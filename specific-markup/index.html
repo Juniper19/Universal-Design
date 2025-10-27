@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessible HTML5 Example</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+  <nav class="skip-nav" aria-label="Skip navigation">
+    <a href="#main">Skip to main content</a>
+  </nav>
+
+  <header>
+    <h1>Accessible HTML5 Example Page</h1>
+    <time datetime="2025-10-27">October 27, 2025</time>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#animals">Animal Table</a></li>
+      <li><a href="#form">Contact Form</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <section id="about">
+      <h2>About This Page</h2>
+      <p>This page is a simple demonstration of accessible, semantic HTML. It includes a skip link, navigation, a basic table, and a form! :D</p>
+    </section>
+
+    <section id="animals">
+      <h2>Animal Information Table</h2>
+      <p id="table-desc">This table lists a few animals, their habitats, and their average lifespans.</p>
+
+      <table aria-describedby="table-desc">
+        <caption>Animals and Their Habitats</caption>
+        <thead>
+          <tr>
+            <th scope="col">Animal</th>
+            <th scope="col">Habitat</th>
+            <th scope="col">Average Lifespan (Years)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Elephant</th>
+            <td>Savanna</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <th scope="row">Penguin</th>
+            <td>Antarctic Coast</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <th scope="row">Tiger</th>
+            <td>Rainforest</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <th scope="row">Dolphin</th>
+            <td>Ocean</td>
+            <td>40</td>
+          </tr>
+          <tr>
+            <th scope="row">Eagle</th>
+            <td>Mountains</td>
+            <td>30</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="form">
+      <h2>Contact Form</h2>
+      <p>Fields marked with * are required.</p>
+
+      <form action="#" method="post">
+        <label for="name">Name *</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
