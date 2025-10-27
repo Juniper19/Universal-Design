@@ -8,17 +8,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-<body>
+<body aria-label="Accessible HTML5">
   <nav class="skip-nav" aria-label="Skip navigation">
     <a href="#main">Skip to main content</a>
   </nav>
 
-  <header>
+  <header aria-label="Page header">
     <h1>Accessible HTML5 Example Page</h1>
     <time datetime="2025-10-27">October 27, 2025</time>
   </header>
 
-  <nav aria-label="Main navigation">
+  <nav aria-label="Main site navigation">
     <ul>
       <li><a href="#about"><span class="material-symbols-outlined" aria-hidden="true">info</span> About</a></li>
       <li><a href="#animals"><span class="material-symbols-outlined" aria-hidden="true">pets</span> Animals</a></li>
@@ -26,7 +26,7 @@
     </ul>
   </nav>
 
-  <main id="main">
+  <main id="main" aria-label="Main content">
     <section id="about">
       <h2>About This Page</h2>
       <p>This page is a simple demonstration of accessible, semantic HTML. It includes a skip link, navigation, a basic table, and a form! :D</p>
@@ -79,7 +79,7 @@
       <h2>Contact Form</h2>
       <p>Fields marked with * are required.</p>
 
-      <form action="#" method="post">
+      <form action="#" method="post" aria-label="Contact form">
         <label for="name">Name *</label>
         <input id="name" name="name" type="text" required />
 
