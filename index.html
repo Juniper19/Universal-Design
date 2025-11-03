@@ -7,8 +7,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1 class="sr-only">Rylee's Class Portal</h1>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <nav aria-label="Main navigation">
+    <h2 class="sr-only">Navigation</h2>
     <ul>
       <li><a href="https://juniper19.github.io/Universal-Design/semantic-html5-p1/index.html">Semantic HTML</a></li>
       <li><a href="https://juniper19.github.io/Universal-Design/specific-markup/index.html">Tables & Screenreading</a></li>
@@ -21,16 +25,18 @@
     <p>Welcome to my class page!</p>
   </header>
 
-  <main>
+  <main id="main-content">
     <section id="about-me">
       <h2>About Me</h2>
-      <p>
-        Hi! My name is Rylee. I'm a Creative Technology and Design student with a niche passion 
-        for writing game design video essays on YouTube, and making games. This page will serve as a home base for 
-        my class assignments and projects as I continue learning throughout the semester!
-      </p>
+      <div class="about-wrapper">
+        <img src="pfp.JPG" alt="Portrait or avatar of Rylee" class="profile-img">
+        <p>
+          Hi! My name is Rylee. I'm a Creative Technology and Design student with a niche passion 
+          for writing game design video essays on YouTube, and making games. This page will serve as a home base for 
+          my class assignments and projects as I continue learning throughout the semester!
+        </p>
+      </div>
     </section>
   </main>
-
 </body>
 </html>
