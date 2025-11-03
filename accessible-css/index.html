@@ -5,16 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accessible CSS Layout</title>
   <link rel="stylesheet" href="style.css" />
-  
-  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Nunito:wght@400;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <h1>accessible css layout</h1>
   </header>
 
-  <nav>
+  <nav aria-label="Main navigation">
+    <h2 class="sr-only">Main navigation</h2>
     <ul>
       <li><a href="#">Link 1</a></li>
       <li><a href="#">Link 2</a></li>
@@ -48,7 +47,7 @@
   </aside>
 
   <footer>
-    <p>Sexy footer for a sexy accessible website</p>
+    <p>© 2025 Accessible Layout Example</p>
   </footer>
 </body>
 </html>
