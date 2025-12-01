@@ -1,3 +1,5 @@
+/* ------------------ Base + Global ------------------ */
+
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
@@ -13,6 +15,8 @@ body {
   --text-muted: #c3c6d1;
 }
 
+/* ------------------ Skip Link ---------- */
+
 .skip-link {
   position: absolute;
   left: -999px;
@@ -27,11 +31,26 @@ body {
   top: 0.5rem;
 }
 
+/* --------------- Header & Nav -------------- */
+
 .site-header {
   background: #070910;
   border-bottom: 1px solid #222838;
   padding: 1rem;
 }
+
+h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1.25rem;
+  color: var(--accent);  
+}
+
+section p {
+  margin-left: 0.5rem;
+  color: var(--text-muted);
+}
+
 
 .site-nav ul {
   list-style: none;
@@ -62,6 +81,8 @@ body {
   color: #ffffff;
 }
 
+/* ----------- Main Content -------------- */
+
 main {
   padding: 1.5rem 1rem 2.5rem;
   max-width: 60rem;
@@ -77,6 +98,38 @@ main h2 {
   font-size: 1.2rem;
 }
 
+/* ------------------ Feature Callout (new) ------------------ */
+
+.feature-callout {
+  background: #101724;
+  border-left: 6px solid var(--accent);
+  padding: 1.25rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+
+.feature-callout h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+/* ----------------------- Full-Width Image Section (new) ---------------------- */
+
+.hero-image {
+  margin: 2rem 0;
+}
+
+.hero-image img {
+  width: 85%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* ------------------ Footer ------------------ */
+
 .site-footer {
   background: #070910;
   border-top: 1px solid #222838;
@@ -85,13 +138,25 @@ main h2 {
   color: var(--text-muted);
 }
 
+/* ---------------- Links --------------- */
+
 a {
   color: var(--accent);
 }
+
 a:hover,
 a:focus-visible {
   text-decoration: underline;
 }
+
+/* ----------------- Focus State ------------------ */
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ------------------ Tablet + Desktop Enhancements ------------------ */
 
 @media (min-width: 768px) {
   .site-header {
@@ -101,9 +166,8 @@ a:focus-visible {
   main {
     padding: 2.5rem 2rem 3rem;
   }
-}
 
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+  .feature-callout {
+    padding: 1.5rem 2rem;
+  }
 }
