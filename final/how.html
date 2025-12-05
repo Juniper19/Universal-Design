@@ -25,37 +25,69 @@
 
     <section>
       <h2>Semantic HTML Techniques</h2>
-      <p>TBD</p>
+      <p>The foundation of accessible web design starts with using the right HTML elements for their intended purpose. Instead of throwing everything into generic '&lt;div&gt;' tags and styling them to look like buttons or headers, use elements like '&lt;header&gt;', '&lt;nav&gt;', '&lt;main&gt;', '&lt;article&gt;', and '&lt;footer&gt;' that actually communicate what they are. These elements give meaning to your content structure, which assistive technologies like screen readers rely on to help users navigate your site. A screen reader can jump straight to the main content or skip to navigation because those elements tell it where things are, which makes the experience so much smoother for people who don't interact with the web visually.
+      <br><br>
+      The same principle applies to interactive elements. Use '&lt;button&gt;' for clickable actions instead of making a '&lt;div&gt;' clickable with JavaScript, because buttons come with built-in keyboard support and semantic meaning. Use heading tags ('&lt;h1&gt;' through '&lt;h6&gt;') in hierarchical order to create a clear document outline that users can scan through. When you structure your content semantically from the start, you're not just making it accessible, you're making it more maintainable and logical for everyone who works with your code.
+      </p>
     </section>
 
     <section>
       <h2>Using ARIA Correctly</h2>
-      <p>TBD</p>
+      <p>ARIA (Accessible Rich Internet Applications) is a set of attributes that add extra accessibility information to your HTML when semantic elements alone aren't enough to describe what's happening on the page.
+      <br><br>
+      There are plenty of situations where ARIA is necessary and incredibly useful. Common attributes include 'aria-label' which provides text labels for icons or buttons that don't have visible text, 'aria-describedby' which links descriptive text to form fields or other elements, and 'aria-live' which announces dynamic content changes to screen readers in real time. You can use 'aria-current="page"' to indicate which page is currently active in your navigation, and 'role' attributes when you need to clarify an element's purpose beyond what its HTML tag conveys. The key is using ARIA thoughtfully to fill in gaps, not to replace proper semantic HTML.
+      </p>
     </section>
+
+    <!-- Feature box thing -->
+    <aside class="feature-callout" role="note">
+      <h2>The first rule of ARIA...</h2>
+      <p><strong>Don't use ARIA if you don't have to.</strong> If there's a semantic HTML element that already does what you need, use that instead. A real '&lt;button&gt;' element is always better than a '&lt;div&gt;' with 'role="button"' because it comes with built-in keyboard support and behavior.</p>
+
+      <p>ARIA is powerful, but it's also easy to misuse in ways that actually make things less accessible. It should be your backup plan for complex interactions, not your first choice for basic HTML structure.</p>
+    </aside>
 
     <section>
       <h2>Accessible Forms & Tables</h2>
-      <p>TBD</p>
+      <p>Tables present their own accessibility challenges because they're all about relationships between data. Always use '&lt;th&gt;' elements for your table headers and include a 'scope' attribute set to either "col" or "row" to indicate whether it's a column or row header. Add a '&lt;caption&gt;' element to describe what the table is showing overall. For more complex tables with multiple levels of headers, you might need to use 'id' and 'headers' attributes to explicitly connect data cells with their corresponding headers. This might seem like extra work, but it's what allows screen reader users to understand the relationships in your data without having to see the visual layout.
+      </p>
     </section>
 
     <section>
       <h2>Responsive Design (Flexbox, Grid, Mobile-First)</h2>
-      <p>TBD</p>
+      <p>Responsive design ensures your website actually works on all the different devices people use to access the web, from massive desktop monitors to phones with cracked screens. CSS Flexbox and Grid are your best tools for creating flexible layouts that adapt automatically to different screen sizes without breaking. The mobile-first approach means you start by designing for small screens first, then progressively enhance the layout for larger screens using '@media' queries. This forces you to prioritize what's truly essential and makes sure your site works for everyone, not just people on fancy desktop setups.
+      <br><br>
+      The technical side of this means avoiding fixed pixel widths and instead using relative units like percentages, 'em', 'rem', or viewport units like 'vw' and 'vh'. Make sure all your interactive elements like buttons and links are at least 44x44 pixels so they're easy to tap on mobile devices, especially for people with motor impairments or anyone trying to use their phone one-handed. Test your site at different zoom levels and make absolutely sure the content reflows properly without forcing horizontal scrolling, because there's nothing more frustrating than having to scroll back and forth to read every line of text.
+      </p>
     </section>
 
     <section>
       <h2>Color Contrast & Readable Typography</h2>
-      <p>TBD</p>
+      <p>Color contrast is one of those things that seems obvious once you know about it, but is violated constantly across the web. Text needs to have sufficient contrast against its background for people with low vision or color blindness to read it comfortably. The WCAG guidelines require a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text (which is 18pt or 14pt bold). And here's the critical part: never rely on color alone to convey information. If you're using red to indicate errors or green for success, also include icons, text labels, or some other visual cue so people who can't distinguish those colors still get the message.
+      <br><br>
+      Typography choices matter just as much as color. Choose readable fonts and use a base font size of at least 16px, because anything smaller starts getting hard to read especially on mobile devices. Keep your line lengths comfortable at around 50-75 characters per line, and use adequate line height (1.5 is a good baseline for body text) so lines don't feel cramped together. Users should be able to resize text up to 200% without your layout breaking or content getting cut off. Avoid justified text alignment because it creates uneven spacing between words that makes reading harder, especially for people with dyslexia or other reading difficulties.
+      </p>
     </section>
 
     <section>
       <h2>Keyboard Navigation Best Practices</h2>
-      <p>TBD</p>
+      <p>Not everyone uses a mouse to navigate the web. Some people rely entirely on keyboard navigation because of motor impairments, personal preference, or because they're using assistive technology. This means every interactive element on your site needs to be accessible via keyboard alone, without requiring a mouse at all. Users should be able to tab through all your links, buttons, and form controls in a logical order that matches the visual layout. And here's something developers mess up all the time: make sure focus indicators are clearly visible. Never remove the outline without providing an alternative focus style, because that focus indicator is how keyboard users know where they are on the page.
     </section>
+
+    <!-- Feature box thing -->
+    <aside class="feature-callout" role="note">
+      <h2>Test with your keyboard...</h2>
+      <p><strong>The best way to test keyboard accessibility is simple: try using your entire site with just your keyboard.</strong> Unplug your mouse or just don't touch your trackpad. Can you get to everything? Can you tell where you are on the page?</p>
+
+      <p>If you get stuck somewhere or can't figure out where your focus is, that's exactly the problem your users will face. This five-minute test will catch more keyboard accessibility issues than any automated tool.</p>
+    </aside>
 
     <section>
       <h2>Testing Tools (WAVE, Lighthouse, Easy Checks)</h2>
-      <p>TBD</p>
+      <p>You can implement all the right techniques, but regular testing is what actually ensures your site stays accessible as it evolves. Browser extensions like WAVE (Web Accessibility Evaluation Tool) are incredibly useful because they visualize accessibility issues directly on your page with icons and overlays showing you exactly what's wrong and where. Google Lighthouse is built right into Chrome DevTools and provides comprehensive accessibility audits along with specific recommendations for fixing issues. These automated tools catch a lot of problems and are a great starting point.
+      <br><br>
+      That said, automated tools can't catch everything. The W3C's "Easy Checks" guide provides simple manual tests that anyone can perform without specialized knowledge, like verifying page titles, checking image alt text, reviewing heading structure, and testing color contrast. Beyond that, actually testing with assistive technologies gives you a much better sense of the real user experience. Try navigating your site with a screen reader like NVDA or JAWS on Windows, or VoiceOver on Mac and iOS. But honestly, the most valuable feedback comes from involving actual users with disabilities in your testing process whenever possible. They'll catch things no automated tool or developer testing can find, because they're the ones who actually live with these barriers every day.
+      </p>
     </section>
   </main>
 
