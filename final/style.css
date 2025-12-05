@@ -156,6 +156,13 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 /* ------------------ Tablet + Desktop Enhancements ------------------ */
 
 @media (min-width: 768px) {

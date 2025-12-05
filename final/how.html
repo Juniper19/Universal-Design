@@ -8,22 +8,23 @@
 </head>
 <body>
 
+  <h1 class="visually-hidden">How To Achieve Universal Design</h1>
+
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
-  <nav class="site-nav">
-    <ul>
-      <li><a href="index.html" aria-label="How">Home</a></li>
-      <li><a href="why.html">Why</a></li>
-      <li><a href="what.html">What</a></li>
-      <li><a href="how.html">How</a></li>
-    </ul>
-  </nav>
+    <nav class="site-nav" aria-labelledby="nav-heading">
+      <h2 id="nav-heading" class="visually-hidden">Site Navigation</h2>
+      <ul>
+        <li><a href="index.html" aria-label="Home">Home</a></li>
+        <li><a href="why.html">Why</a></li>
+        <li><a href="what.html">What</a></li>
+        <li><a href="how.html" aria-current="page">How</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main id="main">
-    <h1>How To Achieve Universal Design</h1>
-
     <section>
       <h2>Semantic HTML Techniques</h2>
       <p>The foundation of accessible web design starts with using the right HTML elements for their intended purpose. Instead of throwing everything into generic '&lt;div&gt;' tags and styling them to look like buttons or headers, use elements like '&lt;header&gt;', '&lt;nav&gt;', '&lt;main&gt;', '&lt;article&gt;', and '&lt;footer&gt;' that actually communicate what they are. These elements give meaning to your content structure, which assistive technologies like screen readers rely on to help users navigate your site. A screen reader can jump straight to the main content or skip to navigation because those elements tell it where things are, which makes the experience so much smoother for people who don't interact with the web visually.
